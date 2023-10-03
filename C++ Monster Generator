@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+void MonGen();
+
+int main() {
+	char input;
+	while (1) {
+		MonGen();
+		cout << "press any key to continue: " << endl;
+		cin >> input;
+	}
+}
+
+void MonGen() {
+	int num = rand() % 100; //0-99
+	if (num < 20) {
+		cout << "A Oni spawned" << endl;
+		cout << "It jumps at you teeth bared" << endl;
+	}
+	else if (num < 50) {
+		cout << "A Golem spawned" << endl;
+		cout << "The ground rumbles underneath you as its body forms" << endl;
+	}
+	else if (num < 70) {
+		cout << "A Oger appears!" << endl;
+		cout << "It slams its club down into the ground causing the floor to shake" << endl;
+	}
+	else if (num < 95) {
+		cout << "A Jinn appears!" << endl;
+		cout << "A blue mist floats around him" << endl;
+	}
+	else
+		cout << "nothing spawned" << endl;
+
+}
